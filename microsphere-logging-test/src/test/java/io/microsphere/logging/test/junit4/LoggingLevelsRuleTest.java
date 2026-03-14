@@ -21,6 +21,7 @@ import org.junit.ClassRule;
 import org.junit.Test;
 
 import static io.microsphere.logging.test.junit4.LoggingLevelsRule.levels;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * {@link LoggingLevelsRule} Test
@@ -36,6 +37,6 @@ public class LoggingLevelsRuleTest {
 
     @Test
     public void test() {
-
+        assertNotNull(loggingLevelsRule);
     }
 }
