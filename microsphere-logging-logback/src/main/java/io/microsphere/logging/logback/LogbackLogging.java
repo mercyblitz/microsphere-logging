@@ -15,19 +15,21 @@
  * limitations under the License.
  */
 
-package io.microsphere.logging;
+package io.microsphere.logging.logback;
+
+import io.microsphere.logging.Logging;
 
 import java.util.List;
 import java.util.Set;
 
 /**
- * Throwable {@link Logging}
+ * {@link Logging} class based on the logback framework.
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see Logging
  * @since 1.0.0
  */
-public class ThrowableLogging implements Logging {
+public class LogbackLogging implements Logging {
 
     @Override
     public List<String> getLoggerNames() {
@@ -56,6 +58,6 @@ public class ThrowableLogging implements Logging {
 
     @Override
     public String getName() {
-        throw new RuntimeException("For testing...");
+        return "";
     }
 }

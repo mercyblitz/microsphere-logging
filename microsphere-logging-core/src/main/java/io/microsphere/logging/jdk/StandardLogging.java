@@ -58,7 +58,7 @@ public class StandardLogging implements Logging {
     }
 
     @Override
-    public Set<String> getSupportedLogLevels() {
+    public Set<String> getSupportedLoggingLevels() {
         return ALL_LEVELS;
     }
 

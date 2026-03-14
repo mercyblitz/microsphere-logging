@@ -23,6 +23,8 @@
         <jsr305.version>3.0.2</jsr305.version>
         <apache-commons-logging.version>1.3.2</apache-commons-logging.version>
         <slf4j.version>2.0.17</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <log4j2.version>2.25.3</log4j2.version>
         <logback.version>1.5.32</logback.version>
         <junit.version>6.0.3</junit.version>
     </properties>
@@ -58,6 +60,26 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- Log4j 1.x -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- Log4j 2.x -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.version}</version>
             </dependency>
 
             <!-- Logback -->

@@ -17,45 +17,25 @@
 
 package io.microsphere.logging;
 
-import java.util.List;
+import io.microsphere.annotation.Nonnull;
+
 import java.util.Set;
 
 /**
- * Throwable {@link Logging}
+ * The class to resolve all log levels for the specified logging framework.
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
- * @see Logging
+ * @see Logging#getSupportedLoggingLevels()
  * @since 1.0.0
  */
-public class ThrowableLogging implements Logging {
+public interface LoggingLevelsResolver {
 
-    @Override
-    public List<String> getLoggerNames() {
-        return List.of();
-    }
-
-    @Override
-    public Set<String> getSupportedLoggingLevels() {
-        return Set.of();
-    }
-
-    @Override
-    public String getLoggerLevel(String loggerName) {
-        return "";
-    }
-
-    @Override
-    public void setLoggerLevel(String loggerName, String levelName) {
-
-    }
-
-    @Override
-    public String getParentLoggerName(String loggerName) {
-        return "";
-    }
-
-    @Override
-    public String getName() {
-        throw new RuntimeException("For testing...");
-    }
+    /**
+     * Get all logging levels based on the specified logging level class.
+     *
+     * @param levelClass the specified logging level class , for example the {@link Class} {@link java.util.logging.Level}
+     * @return allall logging levels , for example [TRACE , DEBUG , INFO , WARN , ERROR]
+     */
+    @Nonnull
+    Set<String> resolve(Class<?> levelClass);
 }

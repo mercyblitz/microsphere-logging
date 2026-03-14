@@ -49,7 +49,7 @@ public interface Logging {
      * @return non-null
      */
     @Nonnull
-    Set<String> getSupportedLogLevels();
+    Set<String> getSupportedLoggingLevels();
 
     /**
      * Gets the name of the log level associated with the specified logger.

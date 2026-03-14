@@ -11,14 +11,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.microsphere-projects</groupId>
-    <artifactId>microsphere-logging-core</artifactId>
+    <artifactId>microsphere-logging-logback</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 
-    <name>Microsphere :: Logging :: Core</name>
-    <description>Microsphere Logging Core</description>
+    <name>Microsphere :: Logging :: Logback</name>
+    <description>Microsphere Logging Logback</description>
 
     <dependencies>
+
+        <!-- Microsphere Logging -->
+        <dependency>
+            <groupId>io.github.microsphere-projects</groupId>
+            <artifactId>microsphere-logging-core</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.microsphere-projects</groupId>
+            <artifactId>microsphere-java-core</artifactId>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Microsphere Java -->
         <dependency>
@@ -33,37 +46,11 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- Apache Commons Logging -->
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <optional>true</optional>
-        </dependency>
 
         <!-- SLF4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <!-- Log4j 1.x -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <!-- Log4j 2.x -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
             <optional>true</optional>
         </dependency>
 

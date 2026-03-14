@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static io.microsphere.collection.Sets.ofSet;
+import static io.microsphere.logging.DefaultLoggingLevelsResolverTest.JAVA_LOGGING_LEVELS;
 import static io.microsphere.logging.jdk.StandardLogging.ALL_LEVELS;
 import static io.microsphere.logging.jdk.StandardLogging.loggingMXBean;
 import static io.microsphere.util.StringUtils.isBlank;
@@ -47,7 +47,7 @@ class StandardLoggingTest {
 
     @Test
     void testConstants() {
-        assertEquals(ofSet("OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL"), ALL_LEVELS);
+        assertEquals(JAVA_LOGGING_LEVELS, ALL_LEVELS);
     }
 
     @Test
@@ -56,8 +56,8 @@ class StandardLoggingTest {
     }
 
     @Test
-    void testGetSupportedLogLevels() {
-        assertEquals(ofSet("OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL"), this.standardLogging.getSupportedLogLevels());
+    void testGetSupportedLoggingLevels() {
+        assertEquals(JAVA_LOGGING_LEVELS, this.standardLogging.getSupportedLoggingLevels());
     }
 
     @Test
