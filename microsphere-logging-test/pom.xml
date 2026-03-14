@@ -13,7 +13,7 @@
     <groupId>io.github.microsphere-projects</groupId>
     <artifactId>microsphere-logging-test</artifactId>
     <version>${revision}</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>Microsphere :: Logging :: Test</name>
     <description>Microsphere Logging Test</description>
