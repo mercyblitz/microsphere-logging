@@ -63,7 +63,7 @@ public class LoggingLevelsStatement extends Statement {
     @Override
     public void evaluate() throws Throwable {
         Class<?> testClass = this.testClass;
-        String loggerName = testClass.getName();
+        String loggerName = testClass.getPackage().getName();
         ClassLoader classLoader = getClassLoader(testClass);
         List<Logging> loggins = loadAll(classLoader);
         for (Logging logging : loggins) {
