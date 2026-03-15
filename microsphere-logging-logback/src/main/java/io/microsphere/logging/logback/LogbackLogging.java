@@ -28,9 +28,7 @@ import java.util.Set;
 import static io.microsphere.constants.SymbolConstants.DOT;
 import static io.microsphere.logging.DefaultLoggingLevelsResolver.INSTANCE;
 import static io.microsphere.logging.logback.util.LoggerUtils.getLevelString;
-import static io.microsphere.logging.logback.util.LoggerUtils.getLogger;
 import static io.microsphere.logging.logback.util.LoggerUtils.getLoggerContext;
-import static io.microsphere.util.StringUtils.substringBeforeLast;
 import static java.util.stream.Collectors.toList;
 import static org.slf4j.Logger.ROOT_LOGGER_NAME;
 
@@ -71,14 +69,12 @@ public class LogbackLogging implements Logging {
         if (ROOT_LOGGER_NAME.equals(loggerName)) {
             return null;
         }
-        String parentLoggerName = substringBeforeLast(loggerName, DOT);
-        if (!loggerName.equals(parentLoggerName)) {
-            Logger logger = getLogger(parentLoggerName);
-            if (logger != null) {
-                return parentLoggerName;
-            }
+        int lastDotIndex = loggerName.lastIndexOf(DOT);
+        if (lastDotIndex == -1) {
+            return ROOT_LOGGER_NAME;
         }
-        return ROOT_LOGGER_NAME;
+        String parentLoggerName = loggerName.substring(0, lastDotIndex);
+        return parentLoggerName;
     }
 
     @Override
