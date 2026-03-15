@@ -4,7 +4,7 @@
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/microsphere-projects/microsphere-logging)
 [![Maven Build](https://github.com/microsphere-projects/microsphere-logging/actions/workflows/maven-build.yml/badge.svg)](https://github.com/microsphere-projects/microsphere-logging/actions/workflows/maven-build.yml)
-[![Codecov](https://codecov.io/gh/microsphere-projects/microsphere-logging/branch/dev/graph/badge.svg)](https://app.codecov.io/gh/microsphere-projects/microsphere-logging)
+[![Codecov](https://codecov.io/gh/microsphere-projects/microsphere-logging/branch/dev-1.x/graph/badge.svg)](https://app.codecov.io/gh/microsphere-projects/microsphere-logging)
 ![Maven](https://img.shields.io/maven-central/v/io.github.microsphere-projects/microsphere-logging.svg)
 ![License](https://img.shields.io/github/license/microsphere-projects/microsphere-logging.svg)
 
@@ -20,12 +20,13 @@ TODO
 
 The framework is organized into several key modules:
 
- Module                           | Purpose                                                                                             
-----------------------------------|-----------------------------------------------------------------------------------------------------
- microsphere-logging-core         | Provides the core utilities across various domains like annotations, collections, concurrency, etc. 
- microsphere-logging-test         | Provides the models and components for logging testing.                                             
- microsphere-logging-dependencies | Manages dependency versions across the project.                                                     
- microsphere-logging-parent       | Parent POM with shared configurations.                                                              
+ Module                           | Purpose                                                                 
+----------------------------------|-------------------------------------------------------------------------
+ microsphere-logging-parent       | Parent POM with shared configurations.                                  
+ microsphere-logging-dependencies | Manages dependency versions across the project.                         
+ microsphere-logging-core         | Provides the core features for logging.                                 
+ microsphere-logging-logback      | Provides the extensions features for logback.                           
+ microsphere-logging-test         | Provides the extensions of JUnit4 or JUnit Jupiter for logging testing. 
 
 ## Getting Started
 
