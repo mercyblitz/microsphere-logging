@@ -53,6 +53,7 @@ class LoggerUtilsTest {
     @Test
     void testGetLogger() {
         assertNotNull(getLogger("test"));
+        assertNotNull(getLogger(LoggerUtilsTest.class));
         assertThrows(NullPointerException.class, () -> getLogger((Class<?>) null));
         assertThrows(IllegalArgumentException.class, () -> getLogger((String) null));
     }
