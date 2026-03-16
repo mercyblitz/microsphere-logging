@@ -63,7 +63,7 @@ public class LogbackLogging implements Logging {
 
     @Override
     public Set<String> getSupportedLoggingLevels() {
-        return INSTANCE.resolve(Level.class);
+        return ALL_LEVELS;
     }
 
     @Override

@@ -27,6 +27,7 @@ import java.util.Set;
 import static io.microsphere.collection.Sets.ofSet;
 import static io.microsphere.lang.Prioritized.NORMAL_PRIORITY;
 import static io.microsphere.logging.LoggerFactory.getLogger;
+import static io.microsphere.logging.logback.LogbackLogging.ALL_LEVELS;
 import static io.microsphere.logging.logback.LogbackLogging.PRIORITY;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -54,6 +55,13 @@ class LogbackLoggingTest {
     @BeforeEach
     void setUp() {
         this.logging = new LogbackLogging();
+    }
+
+    @Test
+    void testConstants() {
+        assertEquals(0, PRIORITY);
+        assertEquals(NORMAL_PRIORITY, PRIORITY);
+        assertEquals(LOGBACK_LEVELS, ALL_LEVELS);
     }
 
     @Test
@@ -101,8 +109,6 @@ class LogbackLoggingTest {
 
     @Test
     void testGetPriority() {
-        assertEquals(0, PRIORITY);
-        assertEquals(NORMAL_PRIORITY, PRIORITY);
         assertEquals(PRIORITY, this.logging.getPriority());
     }
 }
