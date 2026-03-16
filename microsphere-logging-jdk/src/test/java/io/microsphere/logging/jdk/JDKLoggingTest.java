@@ -56,6 +56,7 @@ class JDKLoggingTest {
 
     @Test
     void testConstants() {
+        assertEquals(10, PRIORITY);
         assertEquals(JAVA_LOGGING_LEVELS, ALL_LEVELS);
     }
 
@@ -106,7 +107,6 @@ class JDKLoggingTest {
 
     @Test
     void testGetPriority() {
-        assertEquals(10, PRIORITY);
         assertEquals(PRIORITY, this.JDKLogging.getPriority());
     }
 }
