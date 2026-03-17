@@ -23,14 +23,7 @@
         <!-- Microsphere Java -->
         <dependency>
             <groupId>io.github.microsphere-projects</groupId>
-            <artifactId>microsphere-java-annotations</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.microsphere-projects</groupId>
             <artifactId>microsphere-java-core</artifactId>
-            <optional>true</optional>
         </dependency>
 
         <!-- Apache Commons Logging -->
