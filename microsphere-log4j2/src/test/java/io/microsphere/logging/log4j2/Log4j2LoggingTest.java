@@ -19,7 +19,6 @@ package io.microsphere.logging.log4j2;
 
 
 import io.microsphere.logging.Logger;
-import io.microsphere.logging.Logging;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,9 +26,9 @@ import java.util.Set;
 
 import static io.microsphere.collection.Sets.ofSet;
 import static io.microsphere.logging.LoggerFactory.getLogger;
+import static io.microsphere.logging.LoggingUtils.load;
 import static io.microsphere.logging.log4j2.Log4j2Logging.ALL_LEVELS;
 import static io.microsphere.logging.log4j2.Log4j2Logging.PRIORITY;
-import static io.microsphere.util.ServiceLoaderUtils.loadFirstService;
 import static org.apache.logging.log4j.LogManager.ROOT_LOGGER_NAME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -55,7 +54,7 @@ class Log4j2LoggingTest {
 
     @BeforeEach
     void setUp() {
-        this.logging = (Log4j2Logging) loadFirstService(Logging.class);
+        this.logging = (Log4j2Logging) load();
     }
 
     @Test
