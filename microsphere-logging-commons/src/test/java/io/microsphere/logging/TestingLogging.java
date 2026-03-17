@@ -38,6 +38,11 @@ public class TestingLogging implements Logging {
     private final Map<String, String> loggerNameToLevelMap = new HashMap<>();
 
     @Override
+    public String getRootLoggerName() {
+        return "";
+    }
+
+    @Override
     public List<String> getLoggerNames() {
         return ofList(this.loggerNameToLevelMap.keySet());
     }
@@ -55,11 +60,6 @@ public class TestingLogging implements Logging {
     @Override
     public void setLoggerLevel(String loggerName, String levelName) {
         this.loggerNameToLevelMap.put(loggerName, levelName);
-    }
-
-    @Override
-    public String getParentLoggerName(String loggerName) {
-        return "";
     }
 
     public void init(String... loggerNamesAndLevels) {

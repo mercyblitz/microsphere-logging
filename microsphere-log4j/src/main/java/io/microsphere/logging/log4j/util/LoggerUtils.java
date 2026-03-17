@@ -39,6 +39,9 @@ public abstract class LoggerUtils {
 
     static final LoggerRepository loggerRepository = LogManager.getLoggerRepository();
 
+    /**
+     * The name of Root Logger: "root"
+     */
     public static final String ROOT_LOGGER_NAME = getRootLogger().getName();
 
     /**
