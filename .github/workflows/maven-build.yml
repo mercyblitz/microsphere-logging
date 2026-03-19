@@ -12,7 +12,7 @@ on:
   push:
     branches: [ 'dev' ]
   pull_request:
-    branches: [ 'dev' , 'release' ]
+    branches: [ 'main', 'dev' , 'release' ]
 
 jobs:
   build:
@@ -29,7 +29,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
-          cache: maven
 
       - name: Build with Maven
         run: ./mvnw
@@ -37,6 +36,7 @@ jobs:
           --update-snapshots
           --file pom.xml
           -Drevision=0.0.1-SNAPSHOT
+          -Dsurefire.useSystemClassLoader=false
           test
           --activate-profiles test,coverage
 
