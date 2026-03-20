@@ -34,7 +34,7 @@ jobs:
 
       - name: Sync Wiki Content
         run: |
-          cp wiki/*.md .wiki/
+          rsync -av --include='*.md' --exclude='*' --delete wiki/ .wiki/
 
       - name: Commit and Push
         working-directory: .wiki
