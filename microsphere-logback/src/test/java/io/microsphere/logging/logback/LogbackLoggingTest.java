@@ -82,11 +82,11 @@ class LogbackLoggingTest {
 
     @Test
     void testGetLoggerLevel() {
-        assertEquals("TRACE", this.logging.getLoggerLevel(ROOT_LOGGER_NAME));
-        assertEquals("TRACE", this.logging.getLoggerLevel("io"));
+        assertEquals("INFO", this.logging.getLoggerLevel(ROOT_LOGGER_NAME));
+        assertEquals("INFO", this.logging.getLoggerLevel("io"));
         assertEquals("TRACE", this.logging.getLoggerLevel("io.microsphere"));
-        assertEquals("INFO", this.logging.getLoggerLevel("io.microsphere.logging"));
-        assertEquals("INFO", this.logging.getLoggerLevel(logger.getName()));
+        assertEquals("TRACE", this.logging.getLoggerLevel("io.microsphere.logging"));
+        assertEquals("TRACE", this.logging.getLoggerLevel(logger.getName()));
     }
 
     @Test

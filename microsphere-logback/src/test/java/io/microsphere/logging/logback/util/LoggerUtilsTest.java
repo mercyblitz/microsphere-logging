@@ -61,12 +61,12 @@ class LoggerUtilsTest {
     @Test
     void testGetLevel() {
         assertNull(getLevel((Logger) null));
-        assertEquals(INFO, getLevel("io.microsphere.logging.logback.util.LoggerUtils"));
-        assertEquals(INFO, getLevel("io.microsphere.logging.logback.util"));
-        assertEquals(INFO, getLevel("io.microsphere.logging.logback"));
-        assertEquals(INFO, getLevel("io.microsphere.logging"));
+        assertEquals(TRACE, getLevel("io.microsphere.logging.logback.util.LoggerUtils"));
+        assertEquals(TRACE, getLevel("io.microsphere.logging.logback.util"));
+        assertEquals(TRACE, getLevel("io.microsphere.logging.logback"));
+        assertEquals(TRACE, getLevel("io.microsphere.logging"));
         assertEquals(TRACE, getLevel("io.microsphere"));
-        assertEquals(TRACE, getLevel("io"));
+        assertEquals(INFO, getLevel("io"));
     }
 
     @Test
